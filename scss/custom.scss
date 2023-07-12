@@ -3,17 +3,17 @@
 
 // Include any default variable overrides here (though functions won't be available)
 
+$light:      #d7e6d8;
+$dark:       #102b3c;
+$primary:    #214b21;
+$secondary:  #008e52;
+$info:       #a0596a;
+$success:    #009d08;
+$warning:    #f4c100;
+$danger:     #ee0048;
+
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // Then add additional custom code here
 
 // https://huemint.com/bootstrap-basic/#palette=edecbc-ffffff-090c0e-4a3514-c04441-f2ac2f
-
-$light:      #edecbc;
-$dark:       #090c0e;
-$primary:    #4a3514;
-$secondary:  #c04441;
-$info:       #f2ac2f;
-$success:    #4ea413;
-$warning:    #fec04b;
-$danger:     #f1095d;

@@ -1,48 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/custom.css">
-    <title>Login</title>
-    <style>
-        body{
-            background: #edecbc
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/custom.css">
+  <title>Login</title>
+
 </head>
-<body>
-    <div class="container vh-100">
-        <div class="row">
-            <div class="col d-flex flex-column align-items-center justify-content-center">
-                <div class="col-6 bg-white p-5 d-flex flex-column ">
-                    <h3 class="fw-bold text-center py-4">Iniciar Sesión</h3>
-                    <form>
-                        <div class="mb-3">
-                            <label for="username" class="form-label">Nombre de usuario</label>
-                            <input type="text" class="form-control" name="username" id="username">
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Contraseña</label>
-                            <input type="text" class="form-control" name="password" id="password">
-                        </div>
-    
-                        <div class="d-grid my-3">
-                            <button type="submit" class="btn btn-primary">Ingresar</button>
-                        </div>
-    
-                        <div class="class my-3">
-                            <span> ¿Deseas registrarte? <a href="#"> Registrate </a></span>
-                        </div>
-                        <div class="class my-3">
-                            <span> ¿Olvidaste tu contraseña? <a href="#"> Cambia tu contraseña </a></span>
-                        </div>
-                    </form>
-                </div>
+<body class="bg-light">
+  <div class="container vh-100">
+    <div class="row align-items-center justify-content-center h-100">
+      <div class="col-md-6">
+        <div class="card bg-white">
+          <div class="card-body">
+            <h2 class="card-title text-center font-weight-bold my-3">Iniciar Sesión</h5>
+            <form>
+              <div class="form-group my-3">
+                <label for="usuario">Nombre de usuario</label>
+                <input type="text" class="form-control" id="usuario">
+              </div>
+              <div class="form-group mb-3">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password">
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-success text-white mt-3 mb-3">Iniciar Sesión</button>
+              </div>
+            </form>
+
+            <div class="my-3">
+                <span> ¿No tienes cuenta? <a href="#"> Regístrate </a></span>
             </div>
+            <div class="mb-3">
+                <span> ¿Olvidaste tu contraseña? <a href="#"> Restablecela </a></span>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>
