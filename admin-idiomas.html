@@ -56,7 +56,7 @@
             <h1>Seleccionar idioma</h1>
           </div>
           <div class="col-2 text-end d-flex flex-column align-items-end justify-content-center">
-            <a href="#" class="btn btn-secondary fa-solid fa-plus"></a>
+            <button type="button" class="btn btn-secondary fa-plus fa-solid" data-bs-toggle="modal" data-bs-target="#agregarModal"></button>
           </div>
         </div>
         <hr class="mt-2">
@@ -70,7 +70,7 @@
                     <h5 class="card-title text-end">Idioma</h5> 
                   </div>
                   <div class="col-5 text-start p-0">
-                    <a href="#" class="btn btn-warning fa-solid fa-pencil"></a>
+                    <button type="button" class="btn btn-warning fa-pencil fa-solid" data-bs-toggle="modal" data-bs-target="#nombreModal" data-bs-idioma-id="id1" data-bs-idioma-nombre="Idioma1"></button>
                   </div>
                 </div>
                 <form>
@@ -84,15 +84,103 @@
                   </div>
                 </form>
                 <div class="row">
-                  <div class="col d-grid">
-                    <a href="#" class="btn btn-secondary text-white mt-3">Ver temáticas</a>
+                  <div class="col-6 text-start mt-3">
+                    <a href="#" class="btn btn-secondary text-white">Temáticas</a>
+                  </div>
+                  <div class="col-6 text-end mt-3">
+                    <form>
+                      <button type="submit" class="btn btn-danger text-white" data-bs-toggle="modal" data-bs-target="#borrarModal" data-bs-idioma-id="id4">Borrar</button>
+                    </form>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="modal fade" id="nombreModal" tabindex="-1" aria-labelledby="nombreModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="nombreModalLabel">Edición de idioma</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form>
+                <div class="modal-body">
+                  <div class="mb-3">
+                    <label for="idioma-nombre" class="col-form-label">Nuevo nombre:</label>
+                    <input type="text" class="form-control" id="idioma-nombre">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                  <button type="button" class="btn btn-primary">Aplicar cambios</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="agregarModal" tabindex="-1" aria-labelledby="agregarModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="agregarModalLabel">Agregar Idioma</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form>
+                <div class="modal-body">
+                  <div class="col mb-2">
+                    <label for="idioma-nombre" class="col-form-label">Nombre:</label>
+                    <input type="text" class="form-control" id="idioma-nombre">
+                  </div>
+                  <div class="col">
+                    <label for="idioma-imagen" class="col-form-label">Imágen:</label>
+                    <input class="form-control form-control-sm" id="idioma-imagen" type="file">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                  <button type="button" class="btn btn-primary">Crear</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="borrarModal" tabindex="-1" aria-labelledby="borrarModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="borrarModalLabel">New message</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>¿Esta seguro que desea eliminar el idioma (todos sus temáticas serán eliminadas)</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Borrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
+
+    <script>
+      const nombreModal = document.getElementById('nombreModal');
+      if (nombreModal) {
+        nombreModal.addEventListener('show.bs.modal', event => {
+          const button = event.relatedTarget;
+          const idiomaID = button.getAttribute('data-bs-idioma-id'); // Get the respuesta text from the data-bs-whatever attribute
+          const idiomaNombre = button.getAttribute('data-bs-idioma-nombre');
+          
+          // Update the modal's content.
+          const modalBodyInput = nombreModal.querySelector('#idioma-nombre'); // Use the ID attribute of the textarea
+          modalBodyInput.value = idiomaNombre; // Set the textarea value to the respuesta text
+        });
+      }
+    </script>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/3d7db5b288.js" crossorigin="anonymous"></script>
