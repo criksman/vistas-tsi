@@ -81,10 +81,67 @@
                             <td class="text-center">Otto</td>
                             <td class="text-center">Activo</td>
                             <td class="text-center">
-                                <a href="#" class="btn btn-warning fa-solid fa-pencil"></a>
-                                <button type="button" class="btn btn-success fa-solid fa-rotate-left"></button>
-                                <button type="button" class="btn btn-warning fa-solid fa-ban"></button>
-                                <button type="button" class="btn btn-danger text-white fa-solid fa-trash"></button>
+                                <button type="button" class="btn btn-warning fa-solid fa-rotate-left" data-bs-toggle="modal" data-bs-target="#desbanearModal"> </button>
+                                
+                                <div class="modal fade" id="desbanearModal" tabindex="-1" aria-labelledby="desbanearModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Desbanear usuario</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        ¿Esta seguro que desea desbanear al usuario?
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                        <button type="submit" class="btn btn-warning">Desbanear</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <button type="button" class="btn btn-warning fa-solid fa-ban" data-bs-toggle="modal" data-bs-target="#banModal"> </button>
+                                
+                                <div class="modal fade" id="banModal" tabindex="-1" aria-labelledby="banModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="banModalLabel">Banear Usuario</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        ¿Está seguro que desea banear el usuario?
+                                      </div>
+                                      <form>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                          <button type="submit" class="btn btn-warning">Banear</button>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                                
+                                <button type="button" class="btn btn-danger text-white fa-solid fa-trash" data-bs-toggle="modal" data-bs-target="#borrarModal"> </button>
+
+                                <div class="modal fade" id="borrarModal" tabindex="-1" aria-labelledby="borrarModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="borrarModalLabel">Borrar usuario</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        ¿Está seguro que desea borrar al usuario?
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                        <button type="submit" class="btn btn-danger text-white">Borrar</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
